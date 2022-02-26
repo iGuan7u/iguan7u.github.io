@@ -14,6 +14,8 @@
 
         
     
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    
     <link rel='stylesheet' href="/./css/dracula.css">
 
     <meta name="generator" content="Hexo 6.0.0"></head>
@@ -54,10 +56,44 @@
 
             <div class="al_sidebar_author_info">
                 <h4>iGuan7u</h4>
-                <img class="al_sidebar_avatar" src="https://yourAvatorURL">
+                <img class="al_sidebar_avatar" src="https://cdn.iguan7u.cn/image/avatar.jpg">
                 <p>iOS 出身的小伙子，对 Objective-C、Swift、以及 Javascript 有浓厚的兴趣。热衷使用原生实现所有功能，厌恶一切的跨平台开发技术。喜欢分享工作过程中遇到的问题以及日常工作中遇到的新技术。希望这个博客能给你带来一点启发。</p>
             </div>
 
+            
+                <div class="al_sidebar_contact_info">
+                    <h4>GET IN TOUCH</h4>
+                    <p>期待与你的联系。</p>
+
+                    <div class="dis_flex al_sidebar_social_widget">
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+                            <div class="al_social_icon_cnt" data_link="https://www.github.com/iGuan7u">
+                                <svg class="al_social_icon" id="github">
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_github"></use>
+                                </svg>
+                            </div>
+                        
+
+                        
+                        
+                            <div class="al_social_icon_cnt" data_link="https://www.twitter.com/iGuan7u/">
+                                <svg class="al_social_icon" id="twitter">
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_twitter"></use>
+                                </svg>
+                            </div>
+                        
+                    </div>
+                </div>
             
         </div>
     </div>
@@ -132,6 +168,20 @@
 
                 
                 
+    <div id="al_gitalk_cnt" />
+    <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    <script>
+        var gitalk = new Gitalk({
+            clientID: "065e38d669f0fa5bff9b",
+            clientSecret: "2440e8baec3aec1410a09c994bfb9d53891e04b4",
+            repo: "iguan7u.github.io",
+            owner: "iGuan7u",
+            admin: "iGuan7u",
+            id: "Electron asar 格式详解",
+        });
+        gitalk.render("al_gitalk_cnt")
+    </script>
+
 
                 
 
@@ -167,6 +217,10 @@
 
     
     
+        <div class="al_index_footer_item" onclick="window.open('https://beian.miit.gov.cn')")>
+            粤ICP备16128736号-2
+        </div>
+    
 
     <div class="al_index_footer_item al_index_footer_extra">
         Created By 
@@ -185,6 +239,9 @@
         
         
         
+    <script async defer data-website-id="db0a2778-6317-499a-856b-8e7b4d4de5c7"
+        src="https://umami.iguan7u.cn/umami.js"></script>
+
         
 
     </body>

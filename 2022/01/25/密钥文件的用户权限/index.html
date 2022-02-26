@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>密钥文件的用户权限</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="manifest" href="/site.webmanifest">
+
+        
+    
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    
+    <link rel='stylesheet' href="/./css/dracula.css">
+
+    <meta name="generator" content="Hexo 6.0.0"></head>
+    <body>
+        <header class="al_header al_pos_fixed">
+    <div class="al_header_container dis_flex_jcenter">
+        <div class="al_header_container_left">
+            <div class="al_header_site_title">
+                <a href="/">iGBlog</a>
+            </div>
+        </div>
+
+        <div class="dis_flex_jcenter">
+            <div class="al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-menu"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="al_sidebar">
+
+    <div class="al_sidebar_overlay al_full_cover"></div>
+
+    <div class="al_pos_fixed al_sidebar_cnt">
+        <div class="dis_flex_acenter al_sidebar_header">
+            <h3>iGBlog</h3>
+            <div class="al_sidebar_close al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-close"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="al_sidebar_author_cnt">
+
+            <div class="al_sidebar_author_info">
+                <h4>iGuan7u</h4>
+                <img class="al_sidebar_avatar" src="https://cdn.iguan7u.cn/image/avatar.jpg">
+                <p>iOS 出身的小伙子，对 Objective-C、Swift、以及 Javascript 有浓厚的兴趣。热衷使用原生实现所有功能，厌恶一切的跨平台开发技术。喜欢分享工作过程中遇到的问题以及日常工作中遇到的新技术。希望这个博客能给你带来一点启发。</p>
+            </div>
+
+            
+                <div class="al_sidebar_contact_info">
+                    <h4>GET IN TOUCH</h4>
+                    <p>期待与你的联系。</p>
+
+                    <div class="dis_flex al_sidebar_social_widget">
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+                            <div class="al_social_icon_cnt" data_link="https://www.github.com/iGuan7u">
+                                <svg class="al_social_icon" id="github">
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_github"></use>
+                                </svg>
+                            </div>
+                        
+
+                        
+                        
+                            <div class="al_social_icon_cnt" data_link="https://www.twitter.com/iGuan7u/">
+                                <svg class="al_social_icon" id="twitter">
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_twitter"></use>
+                                </svg>
+                            </div>
+                        
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+        
+    <div class="dis_flex_center al_lightbox_cnt al_full_cover">
+        <img class="al_lightbox_img"/>
+    </div>
+    <div class="al_page_background dis_flex_center al_full_cover"></div>
+    <div class="al_page_container">
+        <div class="al_pos_ab al_fake_background"></div>
+        <div class="al_main_container al_shadow al_main_page_container">
+            <article class="al_article">
+                <header>
+                    <h1 class="al_page_title">
+                        密钥文件的用户权限
+                    </h1>
+                    <div class="al_page_info dis_flex">
+                        <div class="al_page_content_info">
+                            Tue January 25, 2022 05:27 PM
+                        </div>
+
+                        
+                            <div class="al_page_content_info">
+                                904 words
+                            </div>
+                        
+
+                        
+                            <div class="al_page_content_info">
+                                3 minutes read
+                            </div>
+                        
+                        <span class="tags"></span>
+                    </div>
+                </header>
+
+                
+                    <div class="al_page_content_outline">
+                        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0"><span class="toc-text">原因</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%BB%84"><span class="toc-text">第一组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E3%80%81%E4%B8%89%E3%80%81%E5%9B%9B%E7%BB%84"><span class="toc-text">第二、三、四组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text">@</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94%E9%97%AE%E9%A2%98"><span class="toc-text">解答问题</span></a></li></ol>
+                    </div>
+                
+
+                
+                <section id="post-body">
+                    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>笔者在 github 上配置了 ssh key 用于 git 同步操作，通过 ssh 方式操作 clone 不需要输入 github<br>的账号密码，在开发设备迁移过程中有很好的体验，同时也能避免泄漏自己的 github 账号跟密码。但是每次迁移后，首次操作 git 必定能收到以下的错误信息：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs other">The authenticity of host &#x27;github.com (&lt;no hostip for proxy command&gt;)&#x27; can&#x27;t be established.<br>ED25519 key fingerprint is SHA256:+fingerprint.<br>This key is not known by any other names<br>Are you sure you want to continue connecting (yes/no/[fingerprint])? yes<br>Warning: Permanently added &#x27;github.com&#x27; (ED25519) to the list of known hosts.<br>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @<br>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>Permissions 0644 for &#x27;script_file_path&#x27; are too open.<br>It is required that your private key files are NOT accessible by others.<br>This private key will be ignored.<br>Load key &quot;script_file_path&quot;: bad permissions<br>git@github.com: Permission denied (publickey).<br>fatal: Could not read from remote repository.<br><br>Please make sure you have the correct access rights<br>and the repository exists.<br></code></pre></td></tr></table></figure>
+
+<p>之前为止解决这个问题，一直都很机器式的输入 <code>chmod 600 script_file_path</code> 命令，解决权限问题，完全不明白为什么会遇到以上的报错信息、<br><code>600</code> 是什么内容。在这里，深入记录一下。</p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>从提示信息中很容易看出，<code>0644</code> 这个权限对于 ssh 私钥文件过于开放了，因此限制了私钥文件的使用。但是 <code>0644</code> 这个权限代表了什么呢？我们在<br><code>~/.ssh/</code> 目录中敲入一下命令，可以看到对应的结果</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs other">.ssh $: ls -l .<br>.ssh $: total 32<br>-rw-r--r--@ 1 iGuan7u  staff  1499 Jan 15 17:43 private_key<br></code></pre></td></tr></table></figure>
+
+<p>其中 <code>-rw-r-—r—-@</code> 就是对应文件 private_key 的权限。在 linux 系统中，文件权限总共 10 个字符，在 macOS<br>系统中，可能会出现 11 个字符，我们将其分为四组：</p>
+<p><img src="https://cdn.iguan7u.cn/image/%E5%AF%86%E9%92%A5%E6%96%87%E4%BB%B6%E7%9A%84%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90.png" alt="密钥文件的用户权限.png"></p>
+<h3 id="第一组"><a href="#第一组" class="headerlink" title="第一组"></a>第一组</h3><p>其中第一组仅一个字符：</p>
+<ul>
+<li><strong>- 指普通文件</strong></li>
+<li><strong>d 指文件夹</strong></li>
+<li><strong>l 指连接文件</strong></li>
+</ul>
+<h3 id="第二、三、四组"><a href="#第二、三、四组" class="headerlink" title="第二、三、四组"></a>第二、三、四组</h3><p>第二、三、四组的逻辑都一致，我们将其拆分为三个字符看：<strong>r</strong> 为读取权限、<strong>w</strong> 为写入权限、<strong>x</strong> 为执行权限，**-**<br>为对应位置不支持该权限，举例：</p>
+<ul>
+<li><strong>rw-</strong> 为可读性可写权限，不可执行</li>
+<li><strong>r—</strong> 为仅可读权限</li>
+<li>…</li>
+</ul>
+<p>而二、三、四组分别对应不同的用户范围，其中：</p>
+<ul>
+<li>第二组代表创建该文件的用户权限（创建者权限）</li>
+<li>第三组代表创建者所在的用户组的权限</li>
+<li>第四组代表其他用户组的权限</li>
+</ul>
+<h3 id=""><a href="#" class="headerlink" title="@"></a>@</h3><p>@ 这个字符是 macOS 系统特有的，代表该文件拥有<strong>拓展属性</strong>，我们可以在 macOS 中使用 <code>xattr -l $file_path</code><br>查看对应文件的拓展属性。</p>
+<blockquote>
+<p>拓展属性属于操作系统特有的，macOS、Windows<br>都有相关的功能，拓展属性中内容并不会直接记录到文件内容中。在开发过程中用于保存一些与特定文件强相关的持久性数据，非常好用。如文件的下载进度…</p>
+</blockquote>
+<h2 id="解答问题"><a href="#解答问题" class="headerlink" title="解答问题"></a>解答问题</h2><p>那，600 跟 <code>rw-r—r—</code> 有什么关系呢？</p>
+<p>我们依然将权限分为三组，而每一组的三个字符分别对应二进制中的位数，<code>rw-</code> 可以看成 110，对应的十进制数字就是<br>6，其他的两组同样的方式操作，即可以转换为方便理解的三位十进制数字了。（上述的 <code>rw-r—r—</code> 对应的十进制表示方式为 644）</p>
+<p>回到问题，设置为 600 权限，即代表除了当前用户外，其他的用户都无权查看、编辑、执行该文件。ssh 强制密钥不能被其他用户查看，从而保证密钥的安全性。</p>
+
+                </section>
+
+                
+                
+    <div id="al_gitalk_cnt" />
+    <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    <script>
+        var gitalk = new Gitalk({
+            clientID: "065e38d669f0fa5bff9b",
+            clientSecret: "2440e8baec3aec1410a09c994bfb9d53891e04b4",
+            repo: "iguan7u.github.io",
+            owner: "iGuan7u",
+            admin: "iGuan7u",
+            id: "密钥文件的用户权限",
+        });
+        gitalk.render("al_gitalk_cnt")
+    </script>
+
+
+                
+
+            </article>
+
+            
+            <nav class="dis_flex al_post_nav">
+                <a class="al_post_nav_item dis_flex_acenter" href="/">
+                    
+                </a>
+                <a class="al_post_nav_item dis_flex_acenter" href="/2021/10/10/WKWebView-%E8%AE%BE%E7%BD%AE-Cookie-%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%96%B9%E5%BC%8F/">
+                    
+                        <span class="al_text_ellipsis al_post_nav_desc">WKWebView 设置 Cookie 的正确方式</span>
+                        <svg class="al_arrow">
+                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-right"></use>
+                        </svg>
+                    
+                </a>
+            </nav>
+        </div>
+    </div>
+
+
+        <div class="al_index_footer dis_flex_center">
+    <div class="al_index_footer_item al_index_footer_title">
+        iGuan7u
+    </div>
+
+    
+    
+        <div class="al_index_footer_item" onclick="window.open('https://beian.miit.gov.cn')")>
+            粤ICP备16128736号-2
+        </div>
+    
+
+    <div class="al_index_footer_item al_index_footer_extra">
+        Created By 
+        <a target="_blank" rel="noopener" href="https://github.com/iGuan7u/Acetolog">AcetoLog</a>
+         · Power By 
+        <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+    </div>
+
+    <div class="al_index_footer_item al_index_footer_extra_right">
+        All Right Reserved
+    </div>
+</div>
+
+        <script type="text/javascript" async="async" src="/javascripts/acelog.js"></script>
+        
+        
+        
+        
+    <script async defer data-website-id="db0a2778-6317-499a-856b-8e7b4d4de5c7"
+        src="https://umami.iguan7u.cn/umami.js"></script>
+
+        
+
+    </body>
+</html>
+        

@@ -738,4 +738,7 @@ ol li::before {
   .gt-comment-content:hover {
     box-shadow: 0 0.625em 3.75em 0 #0b0b0b !important;
   }
+  .gt-container .gt-comment-body {
+    color: #ccc !important;
+  }
 }
